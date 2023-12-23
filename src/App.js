@@ -215,12 +215,12 @@ function App() {
 
       <p className="text-center p-2">Rolls: {rolls} | Rounds: {rounds} </p>
       <form className="row p-2" onSubmit={(event)=>roundComplete(event)} id="form">
-        <label className="p-2 shadow border m-1 col-lg-5 col-md-5 col-sm-11 col-xs-11"><input type="radio" name="jackpots" disabled={check[0]} value={"Three of a kind"} id="jack1" required/> {check[0]?"Three of a kind":"Three of a kind: Score-20 points"}</label><br/>
-        <label className="p-2 shadow border m-1 col-lg-5 col-md-5 col-sm-11 col-xs-11"><input type="radio" name="jackpots" disabled={check[1]} value={"Four of a kind"} id="jack2" required/> {check[1]?"Four of a kind":"Four of a kind: Score-25 points"}</label><br/>
-        <label className="p-2 shadow border m-1 col-lg-5 col-md-5 col-sm-11 col-xs-11"><input type="radio" name="jackpots" disabled={check[2]} value={"Full house"} id="jack3" required/> {check[2]?"Full house":"Full house: Score-30 points"}</label><br/>
-        <label className="p-2 shadow border m-1 col-lg-5 col-md-5 col-sm-11 col-xs-11"><input type="radio" name="jackpots" disabled={check[3]} value={"Small straight"} id="jack4" required/> {check[3]?"Small straight":"Small straight: Score-35 points"}</label><br/>
-        <label className="p-2 shadow border m-1 col-lg-5 col-md-5 col-sm-11 col-xs-11"><input type="radio" name="jackpots" disabled={check[4]} value={"Large straight"} id="jack5" required/> {check[4]?"Large straight":"Large straight: Score-40 points"}</label><br/>
-        <label className="p-2 shadow border m-1 col-lg-5 col-md-5 col-sm-11 col-xs-11"> <input type="radio" name="jackpots" value={"None of the above: Score 0"} id="jack6"/>  None of the above: Score 0</label><br/>
+        <div className=" my-1 p-2 col-6"><label className="p-2 shadow border col-12"><input type="radio" name="jackpots" disabled={check[0]} value={"Three of a kind"} id="jack1" required/> {check[0]?"Three of a kind":"Three of a kind: Score-20 points"}</label></div>
+        <div className=" my-1 p-2 col-6"><label className="p-2 shadow border col-12"><input type="radio" name="jackpots" disabled={check[1]} value={"Four of a kind"} id="jack2" required/> {check[1]?"Four of a kind":"Four of a kind: Score-25 points"}</label></div>
+        <div className=" my-1 p-2 col-6"><label className="p-2 shadow border col-12"><input type="radio" name="jackpots" disabled={check[2]} value={"Full house"} id="jack3" required/> {check[2]?"Full house":"Full house: Score-30 points"}</label></div>
+        <div className=" my-1 p-2 col-6"><label className="p-2 shadow border col-12"><input type="radio" name="jackpots" disabled={check[3]} value={"Small straight"} id="jack4" required/> {check[3]?"Small straight":"Small straight: Score-35 points"}</label></div>
+        <div className=" my-1 p-2 col-6"><label className="p-2 shadow border col-12"><input type="radio" name="jackpots" disabled={check[4]} value={"Large straight"} id="jack5" required/> {check[4]?"Large straight":"Large straight: Score-40 points"}</label></div>
+        <div className=" my-1 p-2 col-6"><label className="p-2 shadow border col-12"> <input type="radio" name="jackpots" value={"None of the above: Score 0"} id="jack6"/>  None of the above: Score 0</label></div>
          <br/>
         <div className="col-4 my-3 p-2"><button className="btn btn-warning col-12 " type="submit" >Select the score</button></div>
         <div className="col-4 my-3 p-2"><div className="btn btn-warning  col-12 " onClick={rollDice}>Roll the dice</div></div>
